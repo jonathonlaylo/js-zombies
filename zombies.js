@@ -151,7 +151,6 @@ takeItem(item){
   }
 }
 
-
 /**
  * Player Class Method => discardItem(item)
  * -----------------------------
@@ -177,7 +176,16 @@ takeItem(item){
  * @param {Item/Weapon/Food} item   The item to discard.
  * @return {boolean} true/false     Whether player was able to remove item from pack.
  */
-
+discardItem(item){
+  if (this._pack.indexOf(item) > -1){
+    this._pack.splice(this._pack.indexOf(item), 1);
+    console.log(this.item + 'has been taken out!');
+    return true;
+  } else {
+    console.log('There is nothing to take out?');
+    return false;
+  }
+}
 
 /**
  * Player Class Method => equip(itemToEquip)
