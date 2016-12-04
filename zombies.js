@@ -41,7 +41,6 @@ class Weapon extends Item {
  */
 
 
-
 /**
  * Class => Food(name, energy)
  * -----------------------------
@@ -67,7 +66,6 @@ class Food extends Item {
  * Food Extends Item Class
  * -----------------------------
  */
-
 
 
 /**
@@ -125,7 +123,6 @@ checkPack() {
   console.log(this.getPack);
 }
 
-
 /**
  * Player Class Method => takeItem(item)
  * -----------------------------
@@ -143,7 +140,16 @@ checkPack() {
  * @param {Item/Weapon/Food} item   The item to take.
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
-
+takeItem(item){
+  if (this._pack.length <= 2) {
+    this._pack.push(item);
+    console.log('Your ' + this.item + 'fits in the pack!');
+    return true;
+  } else {
+    console.log('Your ' + this.item + 'cannot fit in pack!');
+    return false;
+  }
+}
 
 
 /**
@@ -242,7 +248,7 @@ checkPack() {
  * @return {string/boolean}   Weapon name or false if nothing is equipped.
  */
 
-
+}
 
 /**
  * Class => Zombie(health, strength, speed)
@@ -261,7 +267,7 @@ checkPack() {
  */
 
 
-}
+
 /**
  * Class => FastZombie(health, strength, speed)
  * -----------------------------
