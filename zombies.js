@@ -1,4 +1,4 @@
-  /*jshint esversion: 6 */
+/*jshint esversion: 6 */
 
 /**
  * Class => Item(name)
@@ -141,7 +141,7 @@ checkPack() {
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
 takeItem(item){
-  if (this._pack.length <= 2) {
+  if (this._pack.length < 3) {
     this._pack.push(item);
     console.log('Your ' + this.item + 'fits in the pack!');
     return true;
@@ -182,7 +182,7 @@ discardItem(item){
     console.log(this.item + 'has been taken out!');
     return true;
   } else {
-    console.log('There is nothing to take out?');
+    console.log('There is nothing to take out!');
     return false;
   }
 }
@@ -206,6 +206,7 @@ discardItem(item){
  * @name equip
  * @param {Weapon} itemToEquip  The weapon item to equip.
  */
+
 
 
 /**
@@ -273,7 +274,14 @@ discardItem(item){
  * @property {number} speed
  * @property {boolean} isAlive      Default value should be `true`.
  */
-
+class Zombie{
+  constructor(health, strength, speed){
+    this.health = health;
+    this.strength = strength;
+    this.speed = speed;
+    this.isAlive = true;
+  }
+}
 
 
 /**
@@ -290,8 +298,11 @@ discardItem(item){
  * @param {number} strength         The zombie's strength.
  * @param {number} speed            The zombie's speed.
  */
-
-
+class FastZombie extends Zombie {
+  constructor(health, strength, speed){
+    super(health, strength, speed);
+  }
+}
 /**
  * FastZombie Extends Zombie Class
  * -----------------------------
@@ -313,8 +324,11 @@ discardItem(item){
  * @param {number} strength         The zombie's strength.
  * @param {number} speed            The zombie's speed.
  */
-
-
+class StrongZombie extends Zombie {
+  constructor(health, strength, speed){
+    super(health, strength, speed);
+  }
+}
 /**
  * StrongZombie Extends Zombie Class
  * -----------------------------
@@ -336,8 +350,11 @@ discardItem(item){
  * @param {number} strength         The zombie's strength.
  * @param {number} speed            The zombie's speed.
  */
-
-
+class RangedZombie extends Zombie {
+  constructor(health, strength, speed){
+    super(health, strength, speed);
+  }
+}
 /**
  * RangedZombie Extends Zombie Class
  * -----------------------------
@@ -359,7 +376,11 @@ discardItem(item){
  * @param {number} strength         The zombie's strength.
  * @param {number} speed            The zombie's speed.
  */
-
+class ExplodingZombie extends Zombie {
+  constructor(health, strength, speed){
+    super(health, strength,speed);
+  }
+}
 
 /**
  * ExplodingZombie Extends Zombie Class
