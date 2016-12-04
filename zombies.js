@@ -14,7 +14,6 @@ class Item {
     this.name = name;
   }
 }
-
 /**
  * Class => Weapon(name, damage)
  * -----------------------------
@@ -36,7 +35,6 @@ class Weapon extends Item {
     this.damage = damage;
   }
 }
-
 /**
  * Weapon Extends Item Class
  * -----------------------------
@@ -65,7 +63,6 @@ class Food extends Item {
     this.energy = energy;
   }
 }
-
 /**
  * Food Extends Item Class
  * -----------------------------
@@ -94,6 +91,7 @@ class Food extends Item {
  * @property {method} getPack              Returns private variable `pack`.
  * @property {method} getMaxHealth         Returns private variable `maxHealth`.
  */
+
 
 
 /**
@@ -126,6 +124,7 @@ class Food extends Item {
  * @param {Item/Weapon/Food} item   The item to take.
  * @return {boolean} true/false     Whether player was able to store item in pack.
  */
+
 
 
 /**
@@ -225,6 +224,7 @@ class Food extends Item {
  */
 
 
+
 /**
  * Class => Zombie(health, strength, speed)
  * -----------------------------
@@ -240,6 +240,7 @@ class Food extends Item {
  * @property {number} speed
  * @property {boolean} isAlive      Default value should be `true`.
  */
+
 
 
 /**
