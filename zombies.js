@@ -121,6 +121,9 @@ getMaxHealth(){
  *
  * @name checkPack
  */
+checkPack() {
+  console.log(this.getPack);
+}
 
 
 /**
