@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+
+
 /**
  * Class => Item(name)
  * -----------------------------
@@ -8,7 +11,8 @@
  * @property {string} name
  */
 class Item {
-  constructor(){
+  constructor(name){
+    this.name = name;
   }
 }
 
@@ -31,7 +35,6 @@ module.exports = {
  * @param {number} damage   The weapon's damage.
  * @property {number} damage
  */
-
 
 /**
  * Weapon Extends Item Class
